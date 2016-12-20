@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<body>
+	<html lang="en-US">
+	<div id="content"></div>
+	<div>
+		<!--<button id="button1">send</button>-->
+	<script src="vendor/jquery-3.1.1.min.js">
+	</script>
+		<form id="form1" method="post">
+			Key: <input id="key" type="text" name="key"><br>
+			Value: <input id="value" type="text" name="value"><br>
+			<input type="submit">
+		</form>
+	</div>
+	<script>
+		$("#form1").submit(function(){
+			$.post("http://127.0.0.1:8080",
+			{
+				//key: $("#key").val(),
+				//value : $("#value").val()
+			},
+		})
+	</script>
+	<!--<script>
+		$("#button1").click(function(){
+			$.post("http://127.0.0.1:8080/",
+			{
+				key: "1",
+				value : "15"
+			},
+			function(data,status){
+            	alert("key: " + key + "\nval: " + value);
+        	});
+		});
+	</script>-->
+</body>
